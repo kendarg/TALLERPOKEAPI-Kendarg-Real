@@ -4,11 +4,17 @@ const pokemon = readline.createInterface({
         input: process.stdin,
         output: process.stdout
 });
+//! question
+    // * guarda, envia y espera la informacion dada por nosotros
+//! async
+    //* Esepera a que el usuario termine de escribir
+//! (nombre) =>
+    //* Este es lo mismo que si le agrego funcion desde el inicio funcion(){}
 
 pokemon.question("Ingrese el nombre del pokemon: ", async(nombre)=>{
 
 try{
-    const respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre.toLowerCase()}`);
+    const respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre.toLowerCase()}`); // toLowerCase() es para dejar todo en minuscula
     
     if(!respuesta.ok){
         console.log("Pokemon no encontrado");
