@@ -1,5 +1,5 @@
 // Estados dentro de Consola
-const readline= requiere("readline");
+const readline= require("readline");
 const pokemon = readline.createInterface({
         input: process.stdin,
         output: process.stdout
@@ -31,8 +31,8 @@ try{
     console.log("Peso:", datos.weight);
     
     console.log("\n Tipos")
-    for(const tipo of datos.types){
-        console.log(tipo.types.name);
+    for(const tipo of datos.type){
+        console.log(tipo.type.name);
     }
 
     console.log("\n Stats");
